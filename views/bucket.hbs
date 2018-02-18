@@ -1,0 +1,26 @@
+<h1>Welcome to a bucket!</h1>
+<h3>Bucket ID: {{bucketId}}</h3>
+
+<h4>Stored Files:</h4>
+
+{{#each files}}
+<div class='bucketFile'>
+  <p>file name: {{this.filename}}</p>
+  <p>mimetype: {{this.mimetype}}</p>
+  <p>id: {{this.id}}</p>
+  <a href='/bucketList/{{../bucketId}}/{{this.id}}'>download</a>
+  <a href='/bucketList/{{../bucketId}}/{{this.id}}/deleteFile'>delete</a>
+  <a href='/share/{{../bucketId}}/{{this.id}}'>share</a>
+</div>
+{{/each}}
+
+<form method='post' action='/bucketList/{{bucketId}}' enctype='multipart/form-data'>
+  <p>
+    <label for='fileUpload'>Choose file to upload:</label><br><br>
+    <input type='file' id='fileUpload' name='file'>
+  </p>
+  <br>
+  <div>
+    <button>Submit</button>
+  </div>
+</form>

@@ -1,0 +1,25 @@
+body {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #00B7FF;
+  padding: .2rem;
+}
+
+.bucket {
+  padding: .5rem;
+  margin: 1rem;
+  border: 1px solid black;
+}
+
+.bucketFile {
+  width: 18rem; 
+  padding: .5rem;
+  margin: 1rem;
+  border: 1px solid black;
+}
